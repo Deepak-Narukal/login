@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+:root {
+    --bg-color: rgb(226, 152, 15);
+    --text-color: rgb(241, 237, 233);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(https://images7.alphacoders.com/131/1318301.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    color: aliceblue;
+
+}
+
+.nav a {
+    position: relative;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-left: 30px;
+    font-weight: 200;
+    text-decoration: none;
+}
+
+.nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    border-radius: 5px;
+    transform-origin: right;
+    background-color: #fff;
+    transform: scaleX(0);
+    transition: transform .5s;
+
+}
+
+.nav a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.nav .btnLogin-popup {
+    width: 120px;
+    height: 40px;
+    background: transparent;
+    font-size: 1.2rem;
+    font-weight: 300;
+    border: 2px solid whitesmoke;
+    cursor: pointer;
+    outline: none;
+    color: var(--text-color);
+    border-radius: 6px;
+    margin-left: 30px;
+    transition: .5s ease;
+}
+
+.nav .btnLogin-popup:hover {
+    background: #fff;
+    color: black;
+
+}
+
+.wrapper {
+    width: 420px;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: antiquewhite;
+    border-radius: 10px;
+    padding: 30px 40px;
+}
+
+.wrapper h2 {
+    font-size: 35px;
+    text-align: center;
+}
+
+.wrapper .inputv {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+
+}
+
+.inputv input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    color: var(--text-color);
+    font-size: 16px;
+    padding-left: 5%;
+}
+
+
+.inputv input::placeholder {
+    color: aliceblue;
+    padding-left: 5%;
+}
+
+.inputv i {
+    position: absolute;
+    right: 20px;
+    /* top: 50%;
+    transform: translateY(-50%); */
+    font-size: 20px;
+    bottom: 17px;
+}
+
+.wrapper .rember-forgot {
+    display: flex;
+    justify-content: space-around;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+
+}
+
+.rember-forgot label input {
+    accent-color: var(--text-color);
+    margin: 5px;
+
+}
+
+.rember-forgot a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.rember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.wrapper .btn {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #333;
+    transition: .5s ease;
+    transform-origin: right;
+}
+
+.wrapper .btn:hover{
+    background-color: aliceblue;
+    transform-origin: right;
+}
+
+.wrapper .login-register {
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px;
+
+
+}
+
+.login-register p a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}
+
+.login-register p a:hover {
+    text-decoration: underline;
+}
